@@ -28,7 +28,6 @@ public class MyStack {
         // <--start
         storage[count] = value;
         count++;
-
         // --end-->
     }
 
@@ -61,8 +60,12 @@ public class MyStack {
     private int pop() {
         // TODO: Please pop one element from the array.
         // <--start
-        return storage[count-1];
+        if(count>0){
+            return storage[--count];
+        }
+        throw new UnsupportedOperationException("Stack is empty.");
         // --end-->
+
 
     }
 }
