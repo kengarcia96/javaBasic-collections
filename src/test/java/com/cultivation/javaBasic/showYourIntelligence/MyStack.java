@@ -38,7 +38,12 @@ public class MyStack {
         // TODO: Please create a new array of size newCapacity. And update related fields
         // TODO: You SHOULD NOT USE COLLECTIONS OTHER THAN ARRAY.
         // <--start
-
+        int[] temporary = storage;
+        capacity = newCapacity;
+        storage = new int[capacity];
+        for (int n = 0 ; n < temporary.length ; n++ ){
+            storage[n] = temporary[n];
+        }
         // --end-->
     }
 
@@ -59,6 +64,5 @@ public class MyStack {
         return storage[count-1];
         // --end-->
 
-//        throw new UnsupportedOperationException("Stack is empty.");
     }
 }
