@@ -29,6 +29,7 @@ class DistinctIterator<E> implements Iterator<E> {
     @SuppressWarnings({"FieldCanBeLocal", "unused"})
     private final Iterator<E> iterator;
 
+
     DistinctIterator(Iterator<E> iterator) {
         this.iterator = iterator;
     }
@@ -36,6 +37,8 @@ class DistinctIterator<E> implements Iterator<E> {
     @Override
     public boolean hasNext() {
         throw new NotImplementedException();
+
+
     }
 
     @Override
